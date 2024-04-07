@@ -12,7 +12,8 @@
 				"convertedBy": [
 					"Pancho D Pantera"
 				],
-				"color": "00ff33"
+				"color": "00ff33",
+				"url": "https://raw.githubusercontent.com/PanchoDPantera/Pancho-Tactics/main/Pancho%20Tactics.json"
 			}
 		]
 	},
@@ -25,10 +26,7 @@
 			"type": {
 				"type": "humanoid",
 				"tags": [
-					{
-						"tag": "half-elf",
-						"prefix": "Half elf"
-					}
+					"half-elf"
 				]
 			},
 			"source": "PanchoTactics",
@@ -47,7 +45,7 @@
 				"average": 190
 			},
 			"speed": {
-				"walk": 30
+				"walk": 40
 			},
 			"str": 13,
 			"dex": 22,
@@ -105,7 +103,7 @@
 				{
 					"name": "Special Equipment.",
 					"entries": [
-						"Scanlan wields {@item Lagrima Plateada|PT}, wears {@item +2 Studded Leather Armor of Magic Resistance|PT} and a {@item +2 ring of protection|tdcsr}, and carries a {@item hat of disguise} and a {@item wand of magic missiles}."
+						"Scanlan wields {@item Lagrima Plateada|PT}, wears {@item +2 Studded Leather Armor of Magic Resistance|PT} and a {@item +2 ring of protection|tdcsr}, and carries a {@item hat of disguise} and a {@item wand of magic missiles} that doesnt break if used by magnus."
 					]
 				},
 				{
@@ -130,6 +128,12 @@
 					"name": "Toughness.",
 					"entries": [
 						"Magnus has an additional 40 hit points."
+					]
+				},
+				{
+					"name": "Luck by my side",
+					"entries": [
+						"While attuned to {@item Lagrima Plateada|PT}, Magnus gain 10 speed and opportunity attacks are made with disadvantage against him, also it speed cannot be reduced by any means and it ignores difficult terrain. "
 					]
 				}
 			],
@@ -157,6 +161,7 @@
 						"1": {
 							"spells": [
 								"{@spell healing word}",
+								"{@spell magic missile}",
 								"{@spell thunderwave}"
 							],
 							"slots": 4
@@ -230,9 +235,15 @@
 			],
 			"action": [
 				{
+					"name": "Extra Attack",
+					"entries": [
+						"Magnus can attack twice, instead of once, whenever it takes the Attack action on its turn."
+					]
+				},
+				{
 					"name": "Lagrima Plateada",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}13 ({@damage 1d8 + 9}) slashing damage, or 14 ({@damage 1d10 + 9}) slashing damage if used with both hands, plus 4 ({@damage 1d6 + 1}) force damage. This weapon ignores resistance to slashing damage."
+						"{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}13 ({@damage 1d8 + 11}) slashing damage, or 14 ({@damage 1d10 + 11}) slashing damage if used with both hands, plus 4 ({@damage 1d6 + 1}) force damage."
 					]
 				}
 			],
@@ -262,9 +273,15 @@
 			],
 			"reaction": [
 				{
+					"name": "Opportunity Atack",
+					"entries": [
+						"When an enemy leaves your reach and you make a opportunity attack, you can cast {@spell magic missile} without using a spell slot as part of the oportunity attack you make, targettng the creature you are attacking. You dont need to do verbal or somatic components and you dont need to be able to cast the spell for this reaction to take place."
+					]
+				},
+				{
 					"name": "Cutting Words.",
 					"entries": [
-						"When a creature Magnus can see within 60 feet of him makes an attack roll, an ability check, or a damage roll, he can expend a use of Bardic Inspiration to roll a {@dice d12} and subtract the number rolled from the creature's roll. The creature also has disadvantage on its next saving throw."
+						"When a creature Scanlan can see within 60 feet of him makes an attack roll, an ability check, or a damage roll, he can expend a use of Bardic Inspiration to roll a {@dice d12} and subtract the number rolled from the creature's roll. The creature also has disadvantage on its next saving throw."
 					]
 				}
 			],
@@ -286,7 +303,6 @@
 					}
 				]
 			},
-			"isNpc": true,
 			"damageTags": [
 				"O",
 				"S"
