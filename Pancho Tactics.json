@@ -1,0 +1,310 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "PanchoTactics",
+				"abbreviation": "PT",
+				"full": "Pancho Tactics",
+				"version": "1.0",
+				"authors": [
+					"Pancho D Pantera"
+				],
+				"convertedBy": [
+					"Pancho D Pantera"
+				],
+				"color": "00ff33"
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Magnus",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "half-elf",
+						"prefix": "Half elf"
+					}
+				]
+			},
+			"source": "PanchoTactics",
+			"alignment": null,
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"{@item +2 studded leather armor of magic resistance|PT}",
+						"{@item +2 ring of protection|tdcsr}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d8 + 60 + 40",
+				"average": 190
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 22,
+			"con": 16,
+			"int": 16,
+			"wis": 8,
+			"cha": 22,
+			"passive": 14,
+			"shortName": true,
+			"page": 1,
+			"cr": "15",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Infernal"
+			],
+			"languageTags": [
+				"CE",
+				"C",
+				"DR",
+				"E",
+				"I"
+			],
+			"save": {
+				"cha": "+11",
+				"dex": "+11",
+				"str": "+3",
+				"con": "+5",
+				"int": "+5",
+				"wis": "+1"
+			},
+			"skill": {
+				"sleight of hand": "+16",
+				"deception": "+16",
+				"acrobatics": "+11",
+				"animal handling": "+9",
+				"athletics": "+6",
+				"intimidation": "+11",
+				"investigation": "+13",
+				"stealth": "+16",
+				"persuasion": "+11",
+				"arcana": "+8",
+				"insight": "+4",
+				"perception": "+4"
+			},
+			"trait": [
+				{
+					"name": "Special Equipment.",
+					"entries": [
+						"Scanlan wields {@item Lagrima Plateada|PT}, wears {@item +2 Studded Leather Armor of Magic Resistance|PT} and a {@item +2 ring of protection|tdcsr}, and carries a {@item hat of disguise} and a {@item wand of magic missiles}."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"The Magnus has advantage on saving throws against being {@condition charmed}, and magic can't put the Magnus to sleep."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The Magnus has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Magnus has advantage on Constitution saving throws made to maintain {@status concentration} on spells."
+					]
+				},
+				{
+					"name": "Toughness.",
+					"entries": [
+						"Magnus has an additional 40 hit points."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Magic Resistance"
+			],
+			"resist": [
+				{
+					"special": "Damage from magic spells"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell vicious mockery}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell healing word}",
+								"{@spell thunderwave}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell suggestion}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}",
+								"{@spell stinking cloud}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell polymorph}",
+								"{@spell Otiluke's Resilient Sphere||resilient sphere}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell Bigby's Hand||arcane hand}",
+								"{@spell dominate person}",
+								"{@spell modify memory}",
+								"{@spell seeming}"
+							],
+							"slots": 3
+						},
+						"6": {
+							"spells": [
+								"{@spell eyebite}"
+							],
+							"slots": 2
+						},
+						"7": {
+							"spells": [
+								"{@spell Mordenkainen's Magnificent Mansion||magnificent mansion}",
+								"{@spell reverse gravity}"
+							],
+							"slots": 2
+						},
+						"8": {
+							"spells": [
+								"{@spell dominate monster}"
+							],
+							"slots": 1
+						},
+						"9": {
+							"spells": [
+								"{@spell true polymorph}",
+								"{@spell wish}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Lagrima Plateada",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}13 ({@damage 1d8 + 9}) slashing damage, or 14 ({@damage 1d10 + 9}) slashing damage if used with both hands, plus 4 ({@damage 1d6 + 1}) force damage. This weapon ignores resistance to slashing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"actionHeader": [],
+			"bonus": [
+				{
+					"name": "Arcane Fist (8th Level).",
+					"entries": [
+						"{@atk ms} {@hit 11} to hit, reach 5 ft., one target. {@h}45 ({@damage 10d8}) force damage. Magnus can use this bonus action only while {@status concentration||concentrating} on the arcane hand spell."
+					]
+				},
+				{
+					"name": "Bardic Inspiration (6/Short Rest).",
+					"entries": [
+						"Magnus grants a Bardic Inspiration die to one creature within 60 feet of him who can hear him. Once within the next 10 minutes, the creature can roll a {@dice d12} and add the number rolled to one ability check, attack roll, or saving throw it makes. When Magnus uses this ability, he gains advantage on attack rolls with  {@item Lagrima Plateada|PT} until the end of his turn"
+					]
+				},
+				{
+					"name": "Healing Word (5th Level).",
+					"entries": [
+						"Magnus casts healing word, restoring 18 ({@dice 5d4 + 6}) hit points to himself or another creature he can see within 60 feet of him."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Cutting Words.",
+					"entries": [
+						"When a creature Magnus can see within 60 feet of him makes an attack roll, an ability check, or a damage roll, he can expend a use of Bardic Inspiration to roll a {@dice d12} and subtract the number rolled from the creature's roll. The creature also has disadvantage on its next saving throw."
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://i.imgur.com/9IbIHOQ.png"
+			},
+			"fluff": {
+				"entries": [
+					"Un hombre misterioso que maneja el casino e iglesia de Tymora en Waterdeep, dice ser un ex aventurero que decidio retirarse a retar a personas en juegos de azar y recibir donaciones para la diosa de la suerte, la dama siempre le sonrie. "
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/E3E4qYv.png"
+						}
+					}
+				]
+			},
+			"isNpc": true,
+			"damageTags": [
+				"O",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"L",
+				"N",
+				"O",
+				"T",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			]
+		}
+	]
+}
